@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppNonBlazor.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+            <Label
+                Text="Website Connection Test"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Website Connection Test"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="ButtonMain"
+                Text="Check Website Now"
+                Clicked="CheckConnection"
+                HorizontalOptions="Center">
+            </Button>
+            <ActivityIndicator 
+                IsRunning="False"
+                x:Name="activeIndicator">
+            </ActivityIndicator>
+            <Label
+                Text="Website to Check"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Website to test"
+                FontSize="14"
+                HorizontalOptions="Center" />
+            <Editor 
+                x:Name="url"
+                FontSize="14"
+                Text="https://bunnybreeder.com"
+                HorizontalOptions="Center"
+                AutoSize="TextChanges"/>
+            <Label
+                Text="Response"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Website Response"
+                FontSize="14"
+                HorizontalOptions="Center" />
+            <Editor 
+                x:Name="ResponseText" 
+                Background="Black" 
+                FontSize="14" 
+                TextColor="Green"
+                HorizontalOptions="Center"
+                AutoSize="TextChanges"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
